@@ -61,7 +61,7 @@ const Navigation: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <Layout>
         {!collapsed && (
           <Header className='flex justify-center items-center text-white text-2xl'>
-            Prueba Tecnica Zofra Tacna
+            Prueba Tecnica Kurax
           </Header>
         )}
         <Content style={{ margin: '0 10px' }}>
