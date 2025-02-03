@@ -4,11 +4,12 @@ import useProducts from '@/hooks/use-products'
 import useShoppingCart from '@/hooks/use-shopping-cart'
 import { Product, ShoppingCartItem } from '@/models'
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
-import { Table, TableColumnsType } from 'antd'
+import { message, Table, TableColumnsType } from 'antd'
 
 const Home: React.FC = () => {
   const { products } = useProducts()
   const { addToCart, subtractFromCart } = useShoppingCart()
+  const [messageApi, contextHolder] = message.useMessage()
 
   const dataSource = products.map((product, index) => ({
     key: index,
@@ -60,7 +61,7 @@ const Home: React.FC = () => {
           </button>
         </div>
       )
-    }
+    },
   ]
 
   const onAddProduct = (product: Product) => {
@@ -70,18 +71,23 @@ const Home: React.FC = () => {
       price: product.price,
     }
     addToCart(item)
+    messageApi.success(`Producto \"${product.name}\" agregado al carrito`)
   }
 
   const onSubstractProduct = (product: Product) => {
     subtractFromCart(product.name, 1)
+    messageApi.info(`Producto \"${product.name}\" substraido del carrito`)
   }
 
   return (
-    <Table<Product>
-      pagination={{ pageSize: 5 }}
-      dataSource={dataSource}
-      columns={columns}
-    />
+    <>
+      {contextHolder}
+      <Table<Product>
+        pagination={{ pageSize: 5 }}
+        dataSource={dataSource}
+        columns={columns}
+      />
+    </>
   )
 }
 

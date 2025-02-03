@@ -4,11 +4,12 @@ import useProductHistory from '@/hooks/use-product-history'
 import useShoppingCart from '@/hooks/use-shopping-cart'
 import { ProductHistory, ShoppingCartItem } from '@/models'
 import { DeleteOutlined, MinusOutlined, PlusOutlined } from '@ant-design/icons'
-import { Table, TableColumnsType } from 'antd'
+import { message, Table, TableColumnsType } from 'antd'
 
 const ShoppingCartPage: React.FC = () => {
   const { cartItems, addToCart, subtractFromCart, removeFromCart, clearCart } = useShoppingCart()
   const { addToProductHistory } = useProductHistory()
+  const [messageApi, contextHolder] = message.useMessage()
 
   const dataSource = cartItems.map((item, index) => ({
     key: index,
@@ -79,25 +80,31 @@ const ShoppingCartPage: React.FC = () => {
     }
     addToProductHistory(productHistory)
     clearCart()
+    messageApi.success('Compra realizada con éxito')
   }
 
   return (
-    <div className='flex flex-col gap-y-4'>
-      <Table<ShoppingCartItem>
-        pagination={{ pageSize: 5 }}
-        dataSource={dataSource}
-        columns={columns}
-      />
-      <div className='flex flex-col w-full justify-center items-center text-lg gap-y-1'>
-        <span>Total: PEN {total}</span>
-        <button
-          className='flex w-[30vw] p-2 bg-blue-500 text-white rounded-md justify-center hover:opacity-80 transition-all duration-200'
-          onClick={onPurchase}
-        >
-          Comprar
-        </button>
+    <>
+      {contextHolder}
+      <div className='flex flex-col gap-y-4'>
+        <Table<ShoppingCartItem>
+          pagination={{ pageSize: 5 }}
+          dataSource={dataSource}
+          columns={columns}
+        />
+        {cartItems.length > 0 && (
+          <div className='flex flex-col w-full justify-center items-center text-lg gap-y-1'>
+            <span>Total: PEN {total}</span>
+            <button
+              className='flex w-[30vw] p-2 bg-blue-500 text-white rounded-md justify-center hover:opacity-80 transition-all duration-200'
+              onClick={onPurchase}
+            >
+              Comprar
+            </button>
+          </div>
+        )}
       </div>
-    </div>
+    </>
   )
 }
 

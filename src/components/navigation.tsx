@@ -7,9 +7,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-const { Content, Sider } = Layout
+const { Header, Content, Sider } = Layout
 type MenuItem = Required<MenuProps>['items'][number]
-
 const items: MenuItem[] = [
   {
     key: '1',
@@ -43,7 +42,6 @@ const items: MenuItem[] = [
 const Navigation: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false)
   const matches = useMediaQuery('(max-width: 768px)')
-
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken()
@@ -61,6 +59,11 @@ const Navigation: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <Menu theme='dark' defaultSelectedKeys={['1']} mode='inline' items={items} />
       </Sider>
       <Layout>
+        {!collapsed && (
+          <Header className='flex justify-center items-center text-white text-2xl'>
+            Prueba Tecnica Zofra Tacna
+          </Header>
+        )}
         <Content style={{ margin: '0 10px' }}>
           <div
             style={{
@@ -74,7 +77,7 @@ const Navigation: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </div>
         </Content>
       </Layout>
-    </Layout>
+    </Layout >
   )
 }
 
