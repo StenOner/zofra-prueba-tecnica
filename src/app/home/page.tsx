@@ -1,11 +1,15 @@
 'use client'
 
 import useProducts from '@/hooks/use-products'
-import { Product } from '@/models'
+import useShoppingCart from '@/hooks/use-shopping-cart'
+import { Product, ShoppingCartItem } from '@/models'
+import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
 import { Table, TableColumnsType } from 'antd'
 
 const Home: React.FC = () => {
   const { products } = useProducts()
+  const { addToCart, subtractFromCart } = useShoppingCart()
+
   const dataSource = products.map((product, index) => ({
     key: index,
     ...product,
@@ -36,7 +40,41 @@ const Home: React.FC = () => {
       filters: filterCategories,
       onFilter: (value, record) => record.category.indexOf(value as string) === 0,
     },
+    {
+      title: 'Acciones',
+      dataIndex: '',
+      key: 'actions',
+      render: (record: Product) => (
+        <div className='flex gap-x-1'>
+          <button
+            className='flex justify-center items-center p-2 bg-blue-500 text-white rounded-full hover:opacity-80 transition-all duration-200'
+            onClick={onAddProduct.bind(null, record)}
+          >
+            <PlusOutlined />
+          </button>
+          <button
+            className='flex justify-center items-center p-2 bg-gray-400 text-white rounded-full hover:opacity-80 transition-all duration-200'
+            onClick={onSubstractProduct.bind(null, record)}
+          >
+            <MinusOutlined />
+          </button>
+        </div>
+      )
+    }
   ]
+
+  const onAddProduct = (product: Product) => {
+    const item: ShoppingCartItem = {
+      productName: product.name,
+      quantity: 1,
+      price: product.price,
+    }
+    addToCart(item)
+  }
+
+  const onSubstractProduct = (product: Product) => {
+    subtractFromCart(product.name, 1)
+  }
 
   return (
     <Table<Product>
@@ -44,15 +82,6 @@ const Home: React.FC = () => {
       dataSource={dataSource}
       columns={columns}
     />
-    // <div>
-    //   {products.map((product, index) => (
-    //     <div key={index}>
-    //       <h2>{product.name}</h2>
-    //       <p>{product.description}</p>
-    //       <p>${product.price}</p>
-    //     </div>
-    //   ))}
-    // </div>
   )
 }
 

@@ -3,6 +3,9 @@
 import { Geist, Geist_Mono } from 'next/font/google'
 import Navigation from '@/components/navigation'
 
+import 'tailwindcss/tailwind.css'
+import '@/styles/globals.css'
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -21,8 +24,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`flex w-full ${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{ margin: 0, padding: 0 }}
+        className={`flex w-full ${geistSans.variable} ${geistMono.variable} antialiased m-0 p-0`}
       >
         <Navigation>
           {children}

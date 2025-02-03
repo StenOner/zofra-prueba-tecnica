@@ -10,9 +10,8 @@ const useProducts = () => {
     const fetchProducts = async () => {
       try {
         const response = await fetch('/data/products.json')
-        if (!response.ok) {
-          throw new Error('Failed to fetch products')
-        }
+        if (!response.ok) throw new Error('Failed to fetch products')
+
         const productsData = await response.json()
         setProducts(productsData)
       } catch (err) {
