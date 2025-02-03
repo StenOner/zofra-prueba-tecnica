@@ -1,0 +1,352 @@
+[
+  {
+    "name": "Product 1",
+    "description": "Description for product 1",
+    "price": 10.99,
+    "quantity": 100,
+    "category": "Food"
+  },
+  {
+    "name": "Product 2",
+    "description": "Description for product 2",
+    "price": 12.99,
+    "quantity": 200,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 3",
+    "description": "Description for product 3",
+    "price": 15.99,
+    "quantity": 150,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 4",
+    "description": "Description for product 4",
+    "price": 9.99,
+    "quantity": 300,
+    "category": "Food"
+  },
+  {
+    "name": "Product 5",
+    "description": "Description for product 5",
+    "price": 8.99,
+    "quantity": 250,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 6",
+    "description": "Description for product 6",
+    "price": 11.99,
+    "quantity": 180,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 7",
+    "description": "Description for product 7",
+    "price": 14.99,
+    "quantity": 220,
+    "category": "Food"
+  },
+  {
+    "name": "Product 8",
+    "description": "Description for product 8",
+    "price": 13.99,
+    "quantity": 140,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 9",
+    "description": "Description for product 9",
+    "price": 16.99,
+    "quantity": 160,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 10",
+    "description": "Description for product 10",
+    "price": 7.99,
+    "quantity": 190,
+    "category": "Food"
+  },
+  {
+    "name": "Product 11",
+    "description": "Description for product 11",
+    "price": 10.49,
+    "quantity": 110,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 12",
+    "description": "Description for product 12",
+    "price": 12.49,
+    "quantity": 210,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 13",
+    "description": "Description for product 13",
+    "price": 15.49,
+    "quantity": 130,
+    "category": "Food"
+  },
+  {
+    "name": "Product 14",
+    "description": "Description for product 14",
+    "price": 9.49,
+    "quantity": 310,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 15",
+    "description": "Description for product 15",
+    "price": 8.49,
+    "quantity": 260,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 16",
+    "description": "Description for product 16",
+    "price": 11.49,
+    "quantity": 170,
+    "category": "Food"
+  },
+  {
+    "name": "Product 17",
+    "description": "Description for product 17",
+    "price": 14.49,
+    "quantity": 230,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 18",
+    "description": "Description for product 18",
+    "price": 13.49,
+    "quantity": 150,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 19",
+    "description": "Description for product 19",
+    "price": 16.49,
+    "quantity": 170,
+    "category": "Food"
+  },
+  {
+    "name": "Product 20",
+    "description": "Description for product 20",
+    "price": 7.49,
+    "quantity": 200,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 21",
+    "description": "Description for product 21",
+    "price": 10.99,
+    "quantity": 120,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 22",
+    "description": "Description for product 22",
+    "price": 12.99,
+    "quantity": 220,
+    "category": "Food"
+  },
+  {
+    "name": "Product 23",
+    "description": "Description for product 23",
+    "price": 15.99,
+    "quantity": 140,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 24",
+    "description": "Description for product 24",
+    "price": 9.99,
+    "quantity": 320,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 25",
+    "description": "Description for product 25",
+    "price": 8.99,
+    "quantity": 270,
+    "category": "Food"
+  },
+  {
+    "name": "Product 26",
+    "description": "Description for product 26",
+    "price": 11.99,
+    "quantity": 190,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 27",
+    "description": "Description for product 27",
+    "price": 14.99,
+    "quantity": 240,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 28",
+    "description": "Description for product 28",
+    "price": 13.99,
+    "quantity": 160,
+    "category": "Food"
+  },
+  {
+    "name": "Product 29",
+    "description": "Description for product 29",
+    "price": 16.99,
+    "quantity": 180,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 30",
+    "description": "Description for product 30",
+    "price": 7.99,
+    "quantity": 210,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 31",
+    "description": "Description for product 31",
+    "price": 10.49,
+    "quantity": 130,
+    "category": "Food"
+  },
+  {
+    "name": "Product 32",
+    "description": "Description for product 32",
+    "price": 12.49,
+    "quantity": 230,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 33",
+    "description": "Description for product 33",
+    "price": 15.49,
+    "quantity": 150,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 34",
+    "description": "Description for product 34",
+    "price": 9.49,
+    "quantity": 330,
+    "category": "Food"
+  },
+  {
+    "name": "Product 35",
+    "description": "Description for product 35",
+    "price": 8.49,
+    "quantity": 280,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 36",
+    "description": "Description for product 36",
+    "price": 11.49,
+    "quantity": 200,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 37",
+    "description": "Description for product 37",
+    "price": 14.49,
+    "quantity": 250,
+    "category": "Food"
+  },
+  {
+    "name": "Product 38",
+    "description": "Description for product 38",
+    "price": 13.49,
+    "quantity": 170,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 39",
+    "description": "Description for product 39",
+    "price": 16.49,
+    "quantity": 190,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 40",
+    "description": "Description for product 40",
+    "price": 7.49,
+    "quantity": 220,
+    "category": "Food"
+  },
+  {
+    "name": "Product 41",
+    "description": "Description for product 41",
+    "price": 10.99,
+    "quantity": 140,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 42",
+    "description": "Description for product 42",
+    "price": 12.99,
+    "quantity": 240,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 43",
+    "description": "Description for product 43",
+    "price": 15.99,
+    "quantity": 160,
+    "category": "Food"
+  },
+  {
+    "name": "Product 44",
+    "description": "Description for product 44",
+    "price": 9.99,
+    "quantity": 340,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 45",
+    "description": "Description for product 45",
+    "price": 8.99,
+    "quantity": 290,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 46",
+    "description": "Description for product 46",
+    "price": 11.99,
+    "quantity": 210,
+    "category": "Food"
+  },
+  {
+    "name": "Product 47",
+    "description": "Description for product 47",
+    "price": 14.99,
+    "quantity": 260,
+    "category": "Cars"
+  },
+  {
+    "name": "Product 48",
+    "description": "Description for product 48",
+    "price": 13.99,
+    "quantity": 180,
+    "category": "Cloths"
+  },
+  {
+    "name": "Product 49",
+    "description": "Description for product 49",
+    "price": 16.99,
+    "quantity": 200,
+    "category": "Food"
+  },
+  {
+    "name": "Product 50",
+    "description": "Description for product 50",
+    "price": 7.99,
+    "quantity": 230,
+    "category": "Cars"
+  }
+]
